@@ -4,28 +4,7 @@
 	<title>main</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 
-	<script type="text/javascript">
-	
-		function timer(){
-			var data = new Date();
-			var miesiac = data.getMonth()+1;
-			var dzien = data.getDate();
-			var rok = data.getFullYear();
-			var godzina = data.getHours();
-			var minuta = data.getMinutes();
-			var sekunda = data.getSeconds();
-
-			var czas = "Godzina: " + godzina + ":" + minuta + ":" + sekunda;
-			var czas2 = "Miesiac: " + dzien + ":" + miesiac + ":" + rok;
-
-			document.getElementById("timeDiv").innerHTML = czas;
-			document.getElementById("dataDiv").innerHTML = czas2;
-
-			setTimeout("timer()" , 1000);
-			}
-
-
-	</script>
+	<script type="text/javascript" src="timer.js"></script>
 
 </head>
 <body onload="timer();">
