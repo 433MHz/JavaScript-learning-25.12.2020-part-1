@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>main</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+	<div id="container">
+		<div id="timeDiv"></div>
+		<div id="dataDiv"></div>
+	</div>
+
+
+	<script type="text/javascript">
+
+		var timing = setInterval(timer, 1000);
+
+		function timer(){
+		var data = new Date();
+		var miesiac = data.getMonth()+1;
+		var dzien = data.getDate();
+		var rok = data.getFullYear();
+		var godzina = data.getHours();
+		var minuta = data.getMinutes();
+		var sekunda = data.getSeconds();
+
+		var czas = "Godzina: " + godzina + ":" + minuta + ":" + sekunda;
+		var czas2 = "Miesiac: " + dzien + ":" + miesiac + ":" + rok;
+		document.getElementById("timeDiv").innerHTML = czas;
+		document.getElementById("dataDiv").innerHTML = czas2;
+	}
+	</script>
+</body>
+</html>
